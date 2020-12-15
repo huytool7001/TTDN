@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  form(method='POST')
+    p
+    legend Quên mật khẩu
+    .form-group
+      label(for='email') Email
+      input.form-control(type='text', name='email', autofocus)
+    button.btn.btn-primary(type='submit') Đổi mật khẩu
+    a.btn.btn-link(href='/') Trở lại trang chủ

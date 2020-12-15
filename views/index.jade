@@ -1,0 +1,148 @@
+doctype html
+html(lang='en')
+  head
+    // basic
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    // mobile metas
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='viewport' content='initial-scale=1, maximum-scale=1')
+    // site metas
+    title= title
+    meta(name='keywords' content='')
+    meta(name='description' content='')
+    meta(name='author' content='')
+    // bootstrap css
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    // style css
+    link(rel='stylesheet' href='/css/style.css')
+    // Responsive
+    link(rel='stylesheet' href='/css/responsive.css')
+    // fevicon
+    link(rel='icon' href='/images/fevicon.png' type='/image/gif')
+    // Scrollbar Custom CSS
+    link(rel='stylesheet' href='/css/jquery.mCustomScrollbar.min.css')
+    // Tweaks for older IEs
+    link(rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' media='screen')
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  // body
+  body.main-layout
+    // header
+    header
+      // header inner
+      .header
+        .container
+          .row
+            .col-xl-3.col-lg-3.col-md-3.col-sm-3.col.logo_section
+              .full
+                .center-desk
+                  .logo
+                    a(href='/')
+                      img(src='images/logo.png' alt='#')
+            .col-xl-9.col-lg-9.col-md-9.col-sm-9
+              .menu-area
+                .limit-box
+                  nav.main-menu
+                    ul.menu-area-main
+                      li.active
+                        a(href='/') Trang chủ
+                      if user
+                        li
+                          a(href='/logout') Đăng xuất
+                      else
+                        li
+                          a(href='/login') Đăng nhập
+                        li
+                          a(href='/signup') Đăng ký
+      // end header inner
+      // end header
+      section
+        #main_slider.carousel.slide.banner-main(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#main_slider' data-slide-to='0')
+            li(data-target='#main_slider' data-slide-to='1')
+            li(data-target='#main_slider' data-slide-to='2')
+          .carousel-inner
+            .carousel-item.active
+              .container
+                .row.marginii
+                  .col-xl-6.col-lg-6.col-md-6.col-sm-12
+                    .carousel-caption
+                      h1
+                        | Chào mừng đến
+                      h1
+                        strong.color Việt Nam tươi đẹp
+                      p 
+                        | Việt Nam, mảnh đất hiền hòa với bao phong cảnh tươi đẹp đến lạ thường. Không chỉ là một đất nước hiền hòa, người dân hiền lành thân thiện mà trên mảnh đất hình chữ S yêu thương này có biết bao nhiêu là danh lam thắng cảnh tuyệt đẹp. Bạn đã biết chưa?
+                  .col-xl-6.col-lg-6.col-md-6.col-sm-12
+                    .img-box
+                      figure
+                        img(src='images/gyufyufyu.png' alt='img')
+            
+      #plant.plants
+        .container
+          .row
+            .col-md-12
+              .titlepage
+                h2 Những danh lam thắng cảnh nổi tiếng
+  
+        .container
+          .row
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+              .plants-box
+                figure
+                  img(src='images/vinh-ha-long.jpg' alt='img')
+                h3  Vịnh Hạ Long
+                p
+                  | Không chỉ đẹp bởi cảnh sắc “mây trời sóng nước”, vẻ đẹp nên thơ hay vô số những đảo đá vôi nổi trên mặt nước mà Hạ Long còn đem lại cho du khách cảm giác bình yên khi hòa mình vào cảnh vật nơi đây.
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+              .plants-box
+                figure
+                  img(src='images/sapa.jpg' alt='img')
+                h3  Sa Pa
+                p
+                  | Sa Pa, nơi có các thửa ruộng bậc thang tuyệt đẹp, trải dài như là những nấc thang vươn lên tận lưng trời với thiên nhiên hùng vĩ, thơ mộng, những phiên chợ tình bí ẩn và ẩm thực phong phú, đặc sắc.
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+              .plants-box
+                figure
+                  img(src='images/hohoankiem.jpg' alt='img')
+                h3  Hồ Hoàn Kiếm
+                p
+                  | Hồ Hoàn Kiếm gắn liền với truyền thuyết huyền sử, là biểu tượng khát khao hòa bình của dân tộc Việt Nam. Rất nhiều văn nghệ sĩ đã lấy hình ảnh Hồ Gươm làm nền tảng cho các tác phẩm của mình.
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+              .plants-box
+                figure
+                  img(src='images/vuon-quoc-gia-phong-nha.jpg' alt='img')
+                h3  Phong Nha – Kẻ Bàng
+                p
+                  | Sự kết hợp hài hòa giữa màu xanh ngọc bích của dòng nước, sắc xanh của nền trời và những hang động kì thú nhiều màu sắc đã làm nên vẻ đẹp tuyệt diệu của vườn quốc gia Phong Nha Kẻ Bàng.
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+              .plants-box
+                figure
+                  img(src='images/pho-co-hoi-an.jpg' alt='img')
+                h3  Hội An
+                p
+                  | Hội An ngày nay gần như bảo tồn nguyên trạng các quần thể di tích kiến trúc cổ và nền tảng văn hoá phi vật thể. Ngoài ra nét văn hóa ẩm thực ở Hội An cũng là một trong những điều đặc biệt.
+            .col-xl-4.col-lg-4.col-md-6.col-sm-12
+              .plants-box
+                figure
+                  img(src='images/nha trang.jpg' alt='img')
+                h3  Nha Trang
+                p
+                  | Nha Trang không chỉ sở hữu những bãi cát trắng trải dài, những hòn đảo ngoài khơi có hệ sinh thái san hô kỳ ảo, mà còn nổi tiếng bởi có nhiều ngôi đền Chăm cổ kính rêu phong, những bảo tàng tĩnh lặng.
+    // footer
+    footer
+      .copyright
+        .container
+            if !user
+              marquee(direction="right") 
+                p Chào mừng đến với Việt Nam tươi đẹp
+            else
+              marquee(direction="right") 
+                p Chào mừng #{user.username} đến với Việt Nam tươi đẹp
+          
+        // end footer
+        

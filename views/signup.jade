@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  form(method='POST')
+    p
+    legend Đăng ký
+    .form-group
+      label(for='username') Tài khoản
+      input.form-control(type='text', name='username', autofocus)
+    .form-group
+      label(for='email') Email
+      input.form-control(type='text', name='email')
+    .form-group
+      label(for='password') Mật khẩu
+      input.form-control(type='password', name='password')
+    button.btn.btn-primary(type='submit') Đăng ký
+    a.btn.btn-link(href='/') Trở lại trang chủ
